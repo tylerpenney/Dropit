@@ -44,6 +44,15 @@
                         settings.afterHide.call(this);
                     });
                     
+                    // Close if mouse looses click
+                    
+                    					// Close if outside of area
+					$(".dropit").mouseleave(function () {
+                        settings.beforeHide.call(this);
+                        $('.dropit-open').removeClass('dropit-open').find('.dropit-submenu').hide();
+                        settings.afterHide.call(this);
+					});
+                    
                     settings.afterLoad.call(this);
                 });
             }
